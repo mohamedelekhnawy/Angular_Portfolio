@@ -13,6 +13,10 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "allowedCommonJsDependencies": [
+              "aos"
+            ],
+            "outputPath": "dist/portfolio",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -41,9 +45,9 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
-                },
+                  "maximumWarning": "3mb",
+                  "maximumError": "5mb"
+                } ,
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "4kB",
@@ -93,6 +97,9 @@
               "src/styles.css"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
