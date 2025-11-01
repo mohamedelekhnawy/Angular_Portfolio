@@ -1,0 +1,12 @@
+
+.hero{
+  background: #5aebed;
+  background: linear-gradient(65deg, rgba(90, 235, 237, 1) 0%, rgba(178, 219, 195, 1) 54%, rgba(151, 204, 170, 1) 100%);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  /* height: 80vh; */
+}
+
+.hero h2 {
+  color: #333;
+}

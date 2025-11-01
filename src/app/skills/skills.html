@@ -1,0 +1,26 @@
+
+<div class="filter-box " >
+  <select appBtnHover id="filter" [(ngModel)]="selectedCategory" (change)="filterSkills()">
+    <option value="All">All</option>
+    <option value="Frontend">Frontend</option>
+    <option value="Backend">Backend</option>
+    <option value="Tools">Tools</option>
+  </select>
+</div>
+<div class="row g-3">
+  <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let skill of filteredSkills; let i = index" appCardScale>
+    <div class="card skill-card-custom h-100 border-0 text-center p-3" >
+      <div class="card-body">
+        <h5 class="card-title fw-semibold">{{ skill.name }}</h5>
+        <span class="badge bg-primary-subtle text-primary">{{ skill.category }}</span>
+      </div>
+      <div class="mt-2">
+        <ng-container *ngFor="let star of [].constructor(5); let j = index">
+          <i class="bi" 
+             [ngClass]="j < skill.stars ? 'bi-star-fill text-warning' : 'bi-star text-secondary'">
+          </i>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

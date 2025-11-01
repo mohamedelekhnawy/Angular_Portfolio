@@ -1,0 +1,26 @@
+
+.carousel-inner img {
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5); /* شفاف */
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+    
